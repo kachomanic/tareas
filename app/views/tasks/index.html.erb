@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>  
+<div class="container">  
+  <div class="row">
+<h4>Lista de tareas</h4>  
+<div class="dig_pagination" style="text-align:center;">
+  <div class="page_info">
+   <!-- <= page_entries_info @tasks > LE QUITE LOS PORCENTAJES-->
+  </div>
+  <%= will_paginate @tasks, :container => false %>
+</div>
+      <div class="col l4 s12">  
+        <h5>Abiertas</h5>
+          <% @open.each do |task| %>
+         <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+         <%= task.title %>
+          <%= link_to 'Edit', edit_task_path(task) %>
+          <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Mark as WIP', change_task_path(task, state: 'wip'), method: :put %>
+         </div>
+         </div>
+          <% end %>
+      </div>
+
+      <div class="col l4 s12">  
+        <h5>En progreso</h5>
+          <% @wip.each do |task| %>
+         <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+         <%= task.title %>
+          <%= link_to 'Edit', edit_task_path(task) %>
+          <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Mark as Open', change_task_path(task, state: 'open'), method: :put %>
+          <%= link_to 'Mark as closed', change_task_path(task, state: 'closed'), method: :put %>
+         </div>
+         </div>
+          <% end %>
+      </div>
+
+      <div class="col l4 s12">  
+        <h5>Terminadas</h5>
+          <% @closed.each do |task| %>
+         <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+         <%= task.title %>
+          <%= link_to 'Edit', edit_task_path(task) %>
+          <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Mark as WIP', change_task_path(task, state: 'wip'), method: :put %>
+         </div>
+         </div>
+          <% end %>
+      </div>
+
+</div>  
+<div class="dig_pagination" style="text-align:center;">
+  <div class="page_info">
+   <!-- <= page_entries_info @tasks > LE QUITE LOS PORCENTAJES-->
+  </div>
+  <%= will_paginate @tasks, :container => false %>
+</div>
