@@ -5,9 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# THIS IS TAREAS
-# OKAOKOKOK
-# CONFLICT HERE
+# THIS IS TAREASS
+# NEW CONTENT
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
@@ -22,10 +21,10 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 gem 'materialize-sass'
 gem 'simple_form'
 gem 'devise'
+gem 'tested'
 gem 'will_paginate'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -57,3 +56,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# ANOTHER COMMENT
