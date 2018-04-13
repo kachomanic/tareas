@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'materialize-sass'
 gem 'simple_form'
 gem 'devise'
+gem 'tested'
 gem 'will_paginate'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
